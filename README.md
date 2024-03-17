@@ -14,13 +14,14 @@ Then Chat GPT Also gave the code for how to fix an unusual error in the groupby 
   observed parameter, thus silencing the FutureWarning
 
 
-The Starter code was also utilized for merging the csv files, indexing the school name data, and overall structure of the analysis:
+The Starter code was also utilized for merging the csv files, formating columns, indexing the school name data, and overall structure of the analysis:
 
   merging: 
     school_data_complete = pd.merge(student_data, school_data, how="left", on=["school_name", "school_name"])
     school_data_complete.head()
 
-  indexing:
-    
+  Column Formating: 
+    per_school_summary["Total School Budget"] = per_school_summary["Total School   Budget"].map("${:,.2f}".format)
+    per_school_summary["Per Student Budget"] = per_school_summary["Per Student Budget"].map("${:,.2f}".format)
 
-  indexing :
+  Indexing :
