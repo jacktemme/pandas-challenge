@@ -1,7 +1,7 @@
 This respository contains student and school data for an entire district, which are both found in the Resources folder. A Jupyter Notebook file was coded with Python and the Pandas Library to analyze this data in the PyCitySchools.ipynb file found in the PyCitySchools folder. The Starter code was also included in this folder as it was a code reference, but none of the final coding is in this file. After the analysis was completed, a written report of the findings was laid out in the Pandas_Challenge_Analysis.docx. 
 
 
-Chat GPT was utiilized to help with certain errors that popped up and the specific code needed to fix it. The first being an error in the pd.cut function due to the formatting of a column as a string. This code was utilized to turn the column to a float for accurate results:
+Chat GPT was utilized to help with certain errors that popped up and the specific code needed to fix it. The first being an error in the pd.cut function due to the formatting of a column as a string. This code was utilized to turn the column to a float for accurate results:
 
     school_spending_df["Per Student Budget"] = school_spending_df["Per Student Budget"].str.replace('[\$,]', '',  
     regex=True).astype(float)
